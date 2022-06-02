@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+    :root {
+      --color-primary: hsl(25, 97%, 53%);
+      --color-white: hsl(0, 0%, 100%);
+      --light-grey:  hsl(217, 12%, 63%);
+      --medium-grey: hsl(216, 12%, 54%);
+      --Dark-Blue:hsl(213, 19%, 18%);
+      --Very-Dark-Blue: hsl(216, 12%, 8%);
+      --main-font:'Overpass', sans-serif;
+
+    }
+    body {
+      font-size: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0;
+      background-color: #141519;
+      
+    }
+    .raitingCard {
+      display: flex;
+      flex-direction: column;
+      width: 50em;
+      height: fit-content;
+      min-height: 50em;
+      align-self: center;
+      margin: 3em;
+      justify-content: center;
+      background: var(--Dark-Blue);
+      border-radius: 3.5em;
+      padding: 3em;
+      box-shadow: 3px -118px 227px 13px rgba(25,27,38,0.81) inset;
+      }
+    .raitingCard__ico {
+      display: flex;
+      width: 6.5em;
+      height: 6.5em;
+      border-radius: 100%;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--Dark-Blue);
+      margin-bottom: 3em;
+      
+    }
+    .raitingCard__ico img{
+      width: 2.5em;
+      height: 2.5em;
+    }
+    
+    .raitingCard > p {
+      font-size: 18px;
+      color: var(--medium-grey);
+      margin: 0em  0 2em 0;
+
+    }
+    .raitingCard h1 {
+      color: var(--color-white);
+      font-size: 36px;
+      font-family: var(--main-font);
+      margin-bottom: 10px;
+    }
+    .raitingCard > form {
+      display: grid;
+      width: 100%;
+      height: fit-content;
+      justify-content: center;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 6.8em);
+      gap: 3em 2em;
+    }
+    .raitingCard > form > .btn {
+      background-color: var(--Dark-Blue);
+      display: inline-block;
+      color: var(--medium-grey);
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0%;
+      border-radius: 4em;
+      grid-row: 1/2;
+      font-size: 2em;
+      transition: all .3s ease;
+     
+    }
+    .raitingCard > form > .btn:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+    .raitingCard > form > .btn:focus {
+      background-color: var(--light-grey);
+      color: var(--color-white);
+    }
+    .raitingCard > form > input {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-style: none;
+      width: 100%;
+      height: 100%;
+      padding: 0%;
+      margin: 0%;
+      border-radius: 5em;
+      grid-column: 1/6;
+      font-family: var(--main-font);
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      transition: all .3s ease;
+    }
+    .raitingCard > form > input.active {
+      background-color: var(--color-white);
+      color:var(--color-primary)
+    }
+    
+    .raitingCard__img {
+      display: flex;
+      height:21em ;
+      width: 20em;
+      padding-bottom: 2em;
+      justify-items: center;
+    }
+    .raitingCard__img img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+    .hide {
+      display: none;
+    }
+    .raitingCard__score {
+      display: inline-block;
+      margin: 0 auto 3em auto;
+      width: fit-content;
+      padding: 0.5em 1.25em;
+      background-color: var(--Dark-Blue);
+      border-radius: 3em;
+      color: var(--color-primary) !important;
+      filter: grayscale(.4);
+    }
+    @media (max-width:575px) {
+      body {
+        font-size: 6.5px;
+      }
+      .raitingCard h1 {
+        font-size: 28px;
+      }
+      .raitingCard > p {
+        font-size: 15px;
+      }
+      .raitingCard > form > input {
+        font-size: 15px;
+      }
+    }
